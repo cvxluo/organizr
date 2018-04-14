@@ -11,6 +11,10 @@ import FirebaseAuth
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var schoolTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
