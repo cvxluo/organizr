@@ -1,4 +1,12 @@
 //
+//  ExploreViewController.swift
+//  organizr
+//
+//  Created by Lincoln Roth on 4/14/18.
+//  Copyright © 2018 phs. All rights reserved.
+//
+
+//
 //  GroupsViewController.swift
 //  organizr
 //
@@ -11,11 +19,11 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class ExploreViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
-    @IBOutlet weak var tableView: UITableView!
-   
+
     
+     @IBOutlet weak var tableView: UITableView!
     var groups: [String] = []
     
     lazy var refreshControl: UIRefreshControl = {
@@ -45,7 +53,7 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell2")! as UITableViewCell!
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell3")! as UITableViewCell!
         cell.textLabel?.text = self.groups[indexPath.row]
         
         return cell
@@ -57,8 +65,8 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-
-
+    
+    
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
         let db = Firestore.firestore()
@@ -66,9 +74,22 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         let user = Auth.auth().currentUser!
         let userUID = user.uid
         
+        
+        
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
+                print(dataDescription["school"])
+                db.collection("schools").document(dataDescription["school"] as! String).getDocument { (doc, error) in
+                    print(doc)
+                    if let doc = doc, doc.exists{
+                        print("y'all")
+                        let data = doc.data()
+                        print(data)
+                    }
+                }
+                
+
                 let groupNames = dataDescription["groups"] as! [String]
                 self.groups = Array(Set(self.groups + groupNames))
                 
@@ -76,7 +97,7 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
                 print("Document does not exist")
             }
         }
-        
+        self.groups.append("Howdy")
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }

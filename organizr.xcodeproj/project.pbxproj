@@ -18,6 +18,7 @@
 		46F5383C20824F490011A566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F5383A20824F490011A566 /* LaunchScreen.storyboard */; };
 		9A9FAA842D15D5E59D21F956 /* Pods_organizr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D009E437CDEC799DA8C08FDD /* Pods_organizr.framework */; };
 		E8C00856208297BD008CBE5A /* GroupViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */; };
+		E8C008582082B151008CBE5A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C008572082B151008CBE5A /* ExploreViewController.swift */; };
 		E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F09208275B80000456C /* GroupsViewController.swift */; };
 		E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F0B208275D20000456C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		8C95833BBB7B09C1D8532DFD /* Pods-organizr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.debug.xcconfig"; sourceTree = "<group>"; };
 		D009E437CDEC799DA8C08FDD /* Pods_organizr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_organizr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewerViewController.swift; sourceTree = "<group>"; };
+		E8C008572082B151008CBE5A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		E8F07F09208275B80000456C /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		E8F07F0B208275D20000456C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F176CFCD111F18241F9B091B /* Pods-organizr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.release.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				E8F07F09208275B80000456C /* GroupsViewController.swift */,
 				E8F07F0B208275D20000456C /* SettingsViewController.swift */,
 				E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */,
+				E8C008572082B151008CBE5A /* ExploreViewController.swift */,
 			);
 			path = organizr;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				4643008220826154005BCE85 /* FeedViewController.swift in Sources */,
 				46F5383220824F490011A566 /* AppDelegate.swift in Sources */,
 				46430084208265B6005BCE85 /* RegisterViewController.swift in Sources */,
+				E8C008582082B151008CBE5A /* ExploreViewController.swift in Sources */,
 				468DE6F42082904100D54ED1 /* CreateGroupView.swift in Sources */,
 				E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */,
 				E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */,
