@@ -7,16 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4643008020826004005BCE85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4643007F20826004005BCE85 /* GoogleService-Info.plist */; };
+		4643008220826154005BCE85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643008120826154005BCE85 /* FeedViewController.swift */; };
+		46430084208265B6005BCE85 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46430083208265B6005BCE85 /* RegisterViewController.swift */; };
 		46F5383220824F490011A566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5383120824F490011A566 /* AppDelegate.swift */; };
 		46F5383420824F490011A566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5383320824F490011A566 /* LoginViewController.swift */; };
 		46F5383720824F490011A566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F5383520824F490011A566 /* Main.storyboard */; };
 		46F5383920824F490011A566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F5383820824F490011A566 /* Assets.xcassets */; };
 		46F5383C20824F490011A566 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F5383A20824F490011A566 /* LaunchScreen.storyboard */; };
-		46F5384420824FBF0011A566 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46F5384320824FBF0011A566 /* GoogleService-Info.plist */; };
 		9A9FAA842D15D5E59D21F956 /* Pods_organizr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D009E437CDEC799DA8C08FDD /* Pods_organizr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4643007F20826004005BCE85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4643008120826154005BCE85 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		46430083208265B6005BCE85 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		46F5382E20824F490011A566 /* organizr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = organizr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F5383120824F490011A566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F5383320824F490011A566 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -24,7 +29,6 @@
 		46F5383820824F490011A566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46F5383B20824F490011A566 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46F5383D20824F490011A566 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46F5384320824FBF0011A566 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C95833BBB7B09C1D8532DFD /* Pods-organizr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.debug.xcconfig"; sourceTree = "<group>"; };
 		D009E437CDEC799DA8C08FDD /* Pods_organizr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_organizr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F176CFCD111F18241F9B091B /* Pods-organizr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.release.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,10 +79,12 @@
 				46F5383120824F490011A566 /* AppDelegate.swift */,
 				46F5383320824F490011A566 /* LoginViewController.swift */,
 				46F5383520824F490011A566 /* Main.storyboard */,
+				46430083208265B6005BCE85 /* RegisterViewController.swift */,
 				46F5383820824F490011A566 /* Assets.xcassets */,
 				46F5383A20824F490011A566 /* LaunchScreen.storyboard */,
 				46F5383D20824F490011A566 /* Info.plist */,
-				46F5384320824FBF0011A566 /* GoogleService-Info.plist */,
+				4643007F20826004005BCE85 /* GoogleService-Info.plist */,
+				4643008120826154005BCE85 /* FeedViewController.swift */,
 			);
 			path = organizr;
 			sourceTree = "<group>";
@@ -154,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F5383C20824F490011A566 /* LaunchScreen.storyboard in Resources */,
-				46F5384420824FBF0011A566 /* GoogleService-Info.plist in Resources */,
+				4643008020826004005BCE85 /* GoogleService-Info.plist in Resources */,
 				46F5383920824F490011A566 /* Assets.xcassets in Resources */,
 				46F5383720824F490011A566 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F5383420824F490011A566 /* LoginViewController.swift in Sources */,
+				4643008220826154005BCE85 /* FeedViewController.swift in Sources */,
 				46F5383220824F490011A566 /* AppDelegate.swift in Sources */,
+				46430084208265B6005BCE85 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +406,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHE4Q7G57S;
+				DEVELOPMENT_TEAM = F2PUCLQGKS;
 				INFOPLIST_FILE = organizr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = v.organizr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackphs.organizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -414,10 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AHE4Q7G57S;
+				DEVELOPMENT_TEAM = F2PUCLQGKS;
 				INFOPLIST_FILE = organizr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = v.organizr;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackphs.organizr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

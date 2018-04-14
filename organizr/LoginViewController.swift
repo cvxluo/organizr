@@ -55,13 +55,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     func checkIfLogged(){
         if let user = Auth.auth().currentUser {
-            print("im in")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let secondViewController = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+            let secondViewController = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
             self.present(secondViewController, animated: true, completion: nil)
             
         } else {
-            print("im not in")
         }
         
         
@@ -97,3 +95,4 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
