@@ -62,8 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             var vc = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
-            let navigationController = UINavigationController(rootViewController: vc)
-            self.present(navigationController, animated: true, completion: nil)
+            self.present(vc, animated: true, completion: nil)
 //            let storyboard : UIStoryboard = UIStoryboard(name: "AccountStoryboard", bundle: nil)
 //            let vc : WelcomeViewController = storyboard.instantiateViewControllerWithIdentifier("WelcomeID") as WelcomeViewController
 //            vc.teststring = "hello"

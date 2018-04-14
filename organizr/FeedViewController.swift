@@ -9,24 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class FeedViewController: UIViewController, UITextFieldDelegate {
+class FeedViewController: UITableViewController, UITextFieldDelegate {
     
-    @IBAction func logOutDidPress(_ sender: Any) {
-        try! Auth.auth().signOut()
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-   
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
+
 }
