@@ -9,61 +9,25 @@
 import UIKit
 import FirebaseAuth
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
 
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
-
-    
     @IBAction func loginDidTouch(_ sender: Any) {
         Auth.auth().signIn(withEmail: textFieldLoginEmail.text!,
-                            password: textFieldLoginPassword.text!) { (user, error) in
-                                if error != nil{
-                                    let errorCode = self.errorDidWords(error!)
-                                    self.errorAlert(errorCode)
-                                }else{
-                                    self.checkIfLogged()
-                                }
+                           password: textFieldLoginPassword.text!) { (user, error) in
+                            if error != nil{
+                                let errorCode = self.errorDidWords(error!)
+                                self.errorAlert(errorCode)
+                            }else{
+                                self.checkIfLogged()
+                            }
         }
     }
+    
     func errorDidWords(_ error: Error) -> String {
-//        if let nerr = error as? NSError, let err = AuthErrorCode(rawValue: nerr.code) {
-//            switch err {
-//            case .errorCodeNetworkError:
-//                return "you got no wifi"
-//            case .errorCodeInvalidEmail:
-//                return "thats no email"
-//            case .errorCodeWeakPassword:
-//                return "your password's weak"
-//            case .errorCodeWrongPassword:
-//                return "Wrong password/username"
-//            case .errorCodeUserNotFound:
-//                return "user cannot be found"
-//            case .errorCodeEmailAlreadyInUse:
-//                return "You already have an account"
-//            case .errorCodeInvalidAPIKey:
-//                return "api key is invalid"
-//            case .errorCodeUserDisabled:
-//                return "User has been disabled"
-//            case .errorCodeAccountExistsWithDifferentCredential:
-//                return "Account exists with different credential"
-//            case .errorCodeInternalError:
-//                return "Internal error"
-//            case .errorCodeNoSuchProvider:
-//                return "No such provider"
-//            case .errorCodeKeychainError:
-//                return "Keychain Error"
-//            case .errorCodeTooManyRequests:
-//                return "Too many requests"
-//            case .errorCodeInvalidUserToken:
-//                return "Invalid user token"
-//
-//            default:
-//                return "Error Is unknow"
-//            }
-//        }
         return "Error is unknown"
     }
     func errorAlert(_ errorWords: String){
