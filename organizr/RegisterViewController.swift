@@ -16,6 +16,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var schoolTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBAction func signUpPressed(_ sender: Any) {
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
