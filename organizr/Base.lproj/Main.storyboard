@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -205,13 +205,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="back"/>
                                 <connections>
-                                    <segue destination="uPW-9z-BbH" kind="presentation" id="Rhe-LY-ZfY"/>
+                                    <action selector="backPressed:" destination="L8t-Ip-Gqj" eventType="touchUpInside" id="Kex-SP-Hmc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZK-oK-EwP">
                                 <rect key="frame" x="192" y="253" width="90" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="joinClubPressed:" destination="L8t-Ip-Gqj" eventType="touchUpInside" id="AHH-GX-N3E"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -221,6 +224,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Cax-En-ZH2"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="clubDescription" destination="jxL-KO-dAy" id="TJj-At-I75"/>
                         <outlet property="name" destination="Bkd-zo-SKe" id="T1K-q6-tv3"/>
                     </connections>
                 </viewController>
@@ -307,7 +311,7 @@
         <!--Groups View Controller-->
         <scene sceneID="cgt-9w-yvh">
             <objects>
-                <viewController id="uPW-9z-BbH" customClass="GroupsViewController" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Groups" id="uPW-9z-BbH" customClass="GroupsViewController" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M0b-pM-4S1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,7 +417,4 @@
             <point key="canvasLocation" x="1564" y="2225"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="R0i-xi-CsE"/>
-    </inferredMetricsTieBreakers>
 </document>

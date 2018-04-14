@@ -14,6 +14,18 @@ class GroupViewerViewController: UIViewController{
     var selectedGroup: String!
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var clubDescription: UILabel!
+    @IBAction func backPressed(_ sender: Any) {
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func joinClubPressed(_ sender: Any) {
+        
+        
+    }
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         print("yall")

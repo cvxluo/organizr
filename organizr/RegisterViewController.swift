@@ -64,7 +64,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         db.collection("users").document(id).setData([
             "name": nameTextField.text!,
             "school": schoolTextField.text!,
-            "email": emailTextField.text!
+            "email": emailTextField.text!,
+            "groups" : [String]()
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

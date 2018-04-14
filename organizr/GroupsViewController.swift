@@ -9,6 +9,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
@@ -60,8 +61,21 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
 
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
-    
-        groups.append("More Clubs")
+        let db = Firestore.firestore()
+        
+        let user = Auth.auth().currentUser!
+        let userUID = user.uid
+        
+        db.collection("users").document(userUID).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                let groupNames = dataDescription["groups"] as! [String]
+                self.groups = Array(Set(self.groups + groupNames))
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
         
         self.tableView.reloadData()
         refreshControl.endRefreshing()
