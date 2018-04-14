@@ -9,12 +9,12 @@
 import UIKit
 import FirebaseAuth
 
-class FeedViewController: UITableViewController, UITextFieldDelegate {
+class FeedViewController: UIViewController, UITextFieldDelegate {
     
-    @IBAction func signOutPressed(_ sender: Any) {
+    @IBAction func signOutDidPress(_ sender: Any) {
         try! Auth.auth().signOut()
         self.navigationController?.dismiss(animated: true, completion: nil)
-        
     }
+    
     
 }
