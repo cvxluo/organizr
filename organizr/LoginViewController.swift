@@ -55,10 +55,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     func checkIfLogged(){
         if let user = Auth.auth().currentUser {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let secondViewController = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
-            self.present(secondViewController, animated: true, completion: nil)
+            //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           // let secondViewController = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
             
+           // self.present(secondViewController, animated: true, completion: nil)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var vc = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.present(navigationController, animated: true, completion: nil)
+//            let storyboard : UIStoryboard = UIStoryboard(name: "AccountStoryboard", bundle: nil)
+//            let vc : WelcomeViewController = storyboard.instantiateViewControllerWithIdentifier("WelcomeID") as WelcomeViewController
+//            vc.teststring = "hello"
+//
+//            let navigationController = UINavigationController(rootViewController: vc)
+//
+//            self.presentViewController(navigationController, animated: true, completion: nil)
         } else {
         }
         

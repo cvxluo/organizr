@@ -11,14 +11,13 @@ import FirebaseAuth
 
 class FeedViewController: UIViewController, UITextFieldDelegate {
     
-    @IBAction func logOutDidPressed(_sender: Any){
+    @IBAction func logOutDidPress(_ sender: Any) {
         try! Auth.auth().signOut()
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        hideKeyboardWhenTappedAround()
     }
    
     override func didReceiveMemoryWarning() {
