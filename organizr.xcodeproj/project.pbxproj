@@ -21,6 +21,7 @@
 		E8C00856208297BD008CBE5A /* GroupViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */; };
 		E8C008582082B151008CBE5A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C008572082B151008CBE5A /* ExploreViewController.swift */; };
 		E8C0085A2082F9DF008CBE5A /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */; };
+		E8E69A8A2083054500615C6A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E69A892083054500615C6A /* PostViewController.swift */; };
 		E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F09208275B80000456C /* GroupsViewController.swift */; };
 		E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F0B208275D20000456C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewerViewController.swift; sourceTree = "<group>"; };
 		E8C008572082B151008CBE5A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedViewController.swift; sourceTree = "<group>"; };
+		E8E69A892083054500615C6A /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E8F07F09208275B80000456C /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		E8F07F0B208275D20000456C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F176CFCD111F18241F9B091B /* Pods-organizr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.release.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */,
 				E8C008572082B151008CBE5A /* ExploreViewController.swift */,
 				E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */,
+				E8E69A892083054500615C6A /* PostViewController.swift */,
 			);
 			path = organizr;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E69A8A2083054500615C6A /* PostViewController.swift in Sources */,
 				E8C00856208297BD008CBE5A /* GroupViewerViewController.swift in Sources */,
 				46F5383420824F490011A566 /* LoginViewController.swift in Sources */,
 				4643008220826154005BCE85 /* FeedViewController.swift in Sources */,
