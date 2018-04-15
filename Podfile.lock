@@ -5,6 +5,9 @@ PODS:
   - BoringSSL/Implementation (9.1):
     - BoringSSL/Interface (= 9.1)
   - BoringSSL/Interface (9.1)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - Firebase/Auth (4.6.0):
     - Firebase/Core
     - FirebaseAuth (= 4.3.2)
@@ -79,6 +82,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.12)
   - Hero (1.0.0)
   - leveldb-library (1.20)
+  - LGButton (1.0.4)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -87,15 +91,27 @@ PODS:
   - Protobuf (3.4.0)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
   - Hero
+  - LGButton
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
   BoringSSL: 84318770d120503ab1a6aaf1df777c5ca053697e
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Firebase: 27321a925aa85520618255a7c630859e0502ccbd
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: e58563adb207a43910a2ed87fecb9fa7d556df5a
@@ -112,9 +128,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   Hero: 18e7cf8af41c04c8532d1430ac174004a9365c87
   leveldb-library: 44ef425bfde64f5b41daef86b38db2d13edbbee1
+  LGButton: 40c36e2b7a274d9cb263420e568bc8890832954e
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
 
-PODFILE CHECKSUM: 50797f9227ef9ea43d327b5c5588332ecdedb4bd
+PODFILE CHECKSUM: e7660ec66a06ab3449af169763c64863a8476620
 
 COCOAPODS: 1.4.0

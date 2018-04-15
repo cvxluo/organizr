@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import ChameleonFramework
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -46,6 +47,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Chameleon.setGlobalThemeUsingPrimaryColor(.blue, with: UIContentStyle.light)
         
         // Do any additional setup after loading the view, typically from a nib.
         textFieldLoginPassword.delegate = self
