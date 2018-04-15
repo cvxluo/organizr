@@ -18,6 +18,8 @@ class CreatePostView: UIViewController, UITextFieldDelegate {
     
     @IBAction func createPostPressed(_ sender: Any) {
         
+        let currentDateTime = Date
+        
         let db = Firestore.firestore()
         
         let user = Auth.auth().currentUser!
