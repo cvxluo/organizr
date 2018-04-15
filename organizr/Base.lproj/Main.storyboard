@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1360,11 +1361,14 @@
                                 <action selector="signOutDidPress:" destination="uPW-9z-BbH" id="yUi-VB-uSD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VU8-XP-JlQ">
-                            <connections>
-                                <segue destination="c16-Rn-sBb" kind="presentation" id="hcw-wH-Gyk"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="VU8-XP-JlQ">
+                                <connections>
+                                    <segue destination="c16-Rn-sBb" kind="presentation" id="hcw-wH-Gyk"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Members" id="Xgm-x5-cc1"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="OBU-IP-g9N" id="elz-DO-fQU"/>
@@ -1480,6 +1484,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="hcw-wH-Gyk"/>
         <segue reference="L5k-rA-QMh"/>
         <segue reference="bnV-1x-aCd"/>
         <segue reference="UfJ-4N-e2F"/>
