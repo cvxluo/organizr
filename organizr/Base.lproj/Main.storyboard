@@ -457,10 +457,13 @@
                     <navigationItem key="navigationItem" id="rjg-ng-1tG">
                         <barButtonItem key="leftBarButtonItem" title="Sign out" id="Pl2-tW-PiU">
                             <connections>
-                                <action selector="signOutDidPress:" destination="rIO-ec-VXj" id="Sis-OO-I6Z"/>
+                                <action selector="signOutDidPress:" destination="rIO-ec-VXj" id="cp8-zX-UTV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="RL4-bH-Yzt" id="wr6-Rz-GD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYb-Yr-y5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
