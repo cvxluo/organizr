@@ -82,11 +82,13 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let navVC = segue.destination as? UINavigationController
         
-        let groupfeed = navVC?.viewControllers.first as! GroupFeedViewController
+        if let groupfeed = navVC?.viewControllers.first as? GroupFeedViewController{
         
-        groupfeed.selectedGroup = groups[(tableView.indexPathForSelectedRow?.row)!]
+            groupfeed.selectedGroup = groups[(tableView.indexPathForSelectedRow?.row)!]
+        }
 
     }
     
