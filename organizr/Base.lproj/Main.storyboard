@@ -332,21 +332,55 @@
             </objects>
             <point key="canvasLocation" x="1983" y="3114"/>
         </scene>
-        <!--View Controller-->
+        <!--Post View Controller-->
         <scene sceneID="WJO-pK-J1V">
             <objects>
-                <viewController id="ewd-zP-hRB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostViewController" id="ewd-zP-hRB" customClass="PostViewController" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="btj-e1-rnD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vom-ba-BZD">
+                                <rect key="frame" x="103" y="189" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkm-2s-fcZ">
+                                <rect key="frame" x="103" y="367" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnV-AU-jmz">
+                                <rect key="frame" x="103" y="455" width="169" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5aX-QJ-6Sy"/>
                     </view>
-                    <navigationItem key="navigationItem" id="N7h-rA-jv9"/>
+                    <navigationItem key="navigationItem" id="N7h-rA-jv9">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="KaY-bj-GOe">
+                            <connections>
+                                <action selector="backDidPress:" destination="ewd-zP-hRB" id="vF9-1s-1M4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Qkm-2s-fcZ" id="Z4a-7H-Iga"/>
+                        <outlet property="nameLabel" destination="Vom-ba-BZD" id="Sp3-DE-USY"/>
+                        <outlet property="timestampLabel" destination="NnV-AU-jmz" id="8Qz-pf-1RD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rE-xU-P0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6580" y="1415"/>
+            <point key="canvasLocation" x="6580" y="1414.5427286356824"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eBN-iU-1mB">

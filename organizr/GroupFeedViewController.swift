@@ -17,7 +17,8 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
     var i = 0
     
     @IBOutlet weak var tableView: UITableView!
-    var groups: [String] = []
+    var groups = [[String: Any]]()
+    
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -46,7 +47,8 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell!
-        cell.textLabel?.text = self.groups[indexPath.row]
+        print("dingdong", self.groups[indexPath.row])
+        cell.textLabel?.text = self.groups[indexPath.row]["name"] as! String
         
         return cell
     }
@@ -71,36 +73,41 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
+                print("charlie is stoopid")
+                var temp = [[String:Any]]()
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                    
+                    temp.append(document.data())
+                    print("yoyo")
                 }
+                print(temp)
+                self.groups = temp
+                print(self.groups)
             }
         }
-        db.collection("users").document(userUID).getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data()
-                let gotSchool = dataDescription["school"] as! String
-                let inClubs = dataDescription["groups"] as! [String]
-                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
-                    if let doc = doc, doc.exists{
-                        let data = doc.data()
-                        let gotClubs = data["clubs"] as! [String]
-                        print("inClubs", inClubs)
-                        print("gotClubs", gotClubs)
-                        
-                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
-                        
-                    }
-                }
-            }
-            else {
-                print("bad")
-            }
-        }
+//        db.collection("users").document(userUID).getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let dataDescription = document.data()
+//                let gotSchool = dataDescription["school"] as! String
+//                let inClubs = dataDescription["groups"] as! [String]
+//                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
+//                    if let doc = doc, doc.exists{
+//                        let data = doc.data()
+//                        let gotClubs = data["clubs"] as! [String]
+//                        print("inClubs", inClubs)
+//                        print("gotClubs", gotClubs)
+//
+//                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
+//
+//                    }
+//                }
+//            }
+//            else {
+//                print("bad")
+//            }
+//        }
         print("shit")
-        print("1 shit", groups)
-        groups.append("howdy yall")
-        print("2 shit", groups)
+
         self.i = self.i + 1
         print(i)
         
@@ -115,6 +122,13 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
             print("howdy")
             destination.selectedGroup = self.selectedGroup
             print("testestste")
+        }
+        let navVC = segue.destination as? UINavigationController
+        
+        if let groupfeed = navVC?.viewControllers.first as? PostViewController{
+            
+            groupfeed.selectedPost = groups[(tableView.indexPathForSelectedRow?.row)!]["timestamp"] as! String
+            groupfeed.selectedGroup = self.selectedGroup
         }
     }
 
