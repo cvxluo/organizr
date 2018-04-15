@@ -14,6 +14,7 @@ import FirebaseFirestore
 class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
     var selectedGroup: String!
+    var i = 0
     
     @IBOutlet weak var tableView: UITableView!
     var groups: [String] = []
@@ -65,7 +66,7 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
         let user = Auth.auth().currentUser!
         let userUID = user.uid
         
-        
+        print("bull")
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
@@ -87,7 +88,11 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
                 print("bad")
             }
         }
-        
+        print("shit")
+        groups.append("howdy yall")
+        print(groups)
+        self.i = self.i + 1
+        print(i)
         
         self.tableView.reloadData()
         refreshControl.endRefreshing()
