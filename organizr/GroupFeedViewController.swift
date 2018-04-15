@@ -1,5 +1,5 @@
 //
-//  GroupsViewController.swift
+//  GroupFeedViewController.swift
 //  organizr
 //
 //  Created by Lincoln Roth on 4/14/18.
@@ -11,11 +11,11 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+    
+    var selectedGroup: String!
     
     @IBOutlet weak var tableView: UITableView!
-   
-    
     var groups: [String] = []
     
     lazy var refreshControl: UIRefreshControl = {
@@ -27,38 +27,37 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("fuck", selectedGroup)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.addSubview(self.refreshControl)
     }
     
-    @IBAction func signOutDidPress(_ sender: Any) {
-        try! Auth.auth().signOut()
+    @IBAction func back(_ sender: Any) {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("111")
+        print("2111")
         return self.groups.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell2")! as UITableViewCell!
+        print("2333")
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell3")! as UITableViewCell!
         cell.textLabel?.text = self.groups[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("222")
+        print("3222")
         print("You selected cell #\(indexPath.row)!")
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-
-
+    
+    
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         
         let db = Firestore.firestore()
@@ -66,28 +65,33 @@ class GroupsViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         let user = Auth.auth().currentUser!
         let userUID = user.uid
         
+        
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
-                let groupNames = dataDescription["groups"] as! [String]
-                self.groups = Array(Set(self.groups + groupNames))
-                
-            } else {
-                print("Document does not exist")
+                let gotSchool = dataDescription["school"] as! String
+                let inClubs = dataDescription["groups"] as! [String]
+                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
+                    if let doc = doc, doc.exists{
+                        let data = doc.data()
+                        let gotClubs = data["clubs"] as! [String]
+                        print("inClubs", inClubs)
+                        print("gotClubs", gotClubs)
+                        
+                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
+                        
+                    }
+                }
+            }
+            else {
+                print("bad")
             }
         }
+        
         
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let navVC = segue.destination as? UINavigationController
-        
-        let groupfeed = navVC?.viewControllers.first as! GroupFeedViewController
-        
-        groupfeed.selectedGroup = groups[(tableView.indexPathForSelectedRow?.row)!]
 
-    }
     
 }
