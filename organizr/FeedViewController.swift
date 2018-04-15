@@ -84,7 +84,8 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                             print("Error getting documents: \(err)")
                         } else {
                             for document in querySnapshot!.documents {
-                                let postData = document.data()
+                                var postData = document.data()
+                                postData["group"] = club
                                 allPostNames.append(postData)
                                 self.groups = allPostNames
                                 self.tableView.reloadData()
@@ -112,7 +113,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         if let groupfeed = navVC?.viewControllers.first as? PostViewController{
             
             groupfeed.selectedPost = groups[(tableView.indexPathForSelectedRow?.row)!]["timestamp"] as! String
-            groupfeed.selectedGroup = self.selectedGroup
+            groupfeed.selectedGroup = groups[(tableView.indexPathForSelectedRow?.row)!]["group"] as! String
         }
     }
     
