@@ -89,6 +89,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
+  - TextFieldEffects (1.4.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
@@ -99,6 +100,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - Hero
   - LGButton
+  - TextFieldEffects
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -131,7 +133,8 @@ SPEC CHECKSUMS:
   LGButton: 40c36e2b7a274d9cb263420e568bc8890832954e
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
 
-PODFILE CHECKSUM: e7660ec66a06ab3449af169763c64863a8476620
+PODFILE CHECKSUM: e36b9b2b3ca61d390885d13f42411bd50ce02561
 
 COCOAPODS: 1.4.0

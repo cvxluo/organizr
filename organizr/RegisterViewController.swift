@@ -79,7 +79,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                 let dataDescription = document.data()
                 var gotMembers = dataDescription["students"] as! [String]
                 gotMembers.append(self.nameTextField.text!)
-                
+
                 db.collection("schools").document(self.schoolTextField.text!).updateData([
                     "students": gotMembers
                 ]) { err in

@@ -16,6 +16,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
+    @IBAction func registerPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var vc = storyboard.instantiateViewController(withIdentifier: "RegisterView")
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     @IBAction func loginDidTouch(_ sender: Any) {
         Auth.auth().signIn(withEmail: textFieldLoginEmail.text!,
                            password: textFieldLoginPassword.text!) { (user, error) in
@@ -47,9 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        Chameleon.setGlobalThemeUsingPrimaryColor(.blue, with: UIContentStyle.light)
-        
+                
         // Do any additional setup after loading the view, typically from a nib.
         textFieldLoginPassword.delegate = self
         textFieldLoginEmail.delegate = self

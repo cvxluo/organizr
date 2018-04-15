@@ -15,5 +15,7 @@ pod 'Firebase/Firestore'
 pod 'Hero'
 pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 pod 'LGButton'
+pod 'TextFieldEffects'
+
 
 end
