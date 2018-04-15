@@ -21,6 +21,9 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     @IBAction func signOutDidPress(_ sender: Any) {
         
+        try! Auth.auth().signOut()
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
     }
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -45,7 +48,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell6")! as UITableViewCell
         cell.textLabel?.text = self.groups[indexPath.row]
         
         return cell
@@ -66,36 +69,37 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         let user = Auth.auth().currentUser!
         let userUID = user.uid
         
-        print("bull")
+    
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
-                let gotSchool = dataDescription["school"] as! String
-                let inClubs = dataDescription["groups"] as! [String]
-                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
-                    if let doc = doc, doc.exists{
-                        let data = doc.data()
-                        let gotClubs = data["clubs"] as! [String]
-                        print("inClubs", inClubs)
-                        print("gotClubs", gotClubs)
-                        
-                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
-                        
+                let userClubs = dataDescription["groups"] as! [String]
+                print("userclubs", userClubs)
+                
+                var allPostNames = [String]()
+                
+                for club in userClubs {
+                    db.collection("groups").document(club).collection("posts").getDocuments() { (querySnapshot, err) in
+                        if let err = err {
+                            print("Error getting documents: \(err)")
+                        } else {
+                            for document in querySnapshot!.documents {
+                                let postData = document.data()
+                                allPostNames.append(postData["name"] as! String)
+                                self.groups = allPostNames
+                                self.tableView.reloadData()
+                                refreshControl.endRefreshing()
+                                
+                            }
+                        }
                     }
                 }
-            }
-            else {
-                print("bad")
+                
             }
         }
-        print("shit")
-        groups.append("howdy yall")
-        print(groups)
-        self.i = self.i + 1
-        print(i)
         
-        self.tableView.reloadData()
-        refreshControl.endRefreshing()
+        //self.tableView.reloadData()
+        //refreshControl.endRefreshing()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
