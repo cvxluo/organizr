@@ -16,12 +16,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textFieldLoginEmail: UITextField!
     @IBOutlet weak var textFieldLoginPassword: UITextField!
     
-    @IBAction func registerPressed(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc = storyboard.instantiateViewController(withIdentifier: "RegisterView")
-        self.present(vc, animated: true, completion: nil)
-        
-    }
     @IBAction func loginDidTouch(_ sender: Any) {
         Auth.auth().signIn(withEmail: textFieldLoginEmail.text!,
                            password: textFieldLoginPassword.text!) { (user, error) in

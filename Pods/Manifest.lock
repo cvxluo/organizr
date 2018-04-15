@@ -89,7 +89,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.4.0)
-  - TextFieldEffects (1.4.0)
+  - SkyFloatingLabelTextField (3.3.0)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
@@ -100,7 +100,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - Hero
   - LGButton
-  - TextFieldEffects
+  - SkyFloatingLabelTextField (~> 3.0)
 
 EXTERNAL SOURCES:
   ChameleonFramework:
@@ -133,8 +133,8 @@ SPEC CHECKSUMS:
   LGButton: 40c36e2b7a274d9cb263420e568bc8890832954e
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
-  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+  SkyFloatingLabelTextField: 771be94beca6868a6cea187f70c965ebd81d2f93
 
-PODFILE CHECKSUM: e36b9b2b3ca61d390885d13f42411bd50ce02561
+PODFILE CHECKSUM: 9e34c76ace51ae849cb0103625e9498775d117d9
 
 COCOAPODS: 1.4.0
