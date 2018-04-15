@@ -44,7 +44,7 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell3")! as UITableViewCell!
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell!
         cell.textLabel?.text = self.groups[indexPath.row]
         
         return cell
