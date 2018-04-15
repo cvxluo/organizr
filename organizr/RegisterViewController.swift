@@ -23,11 +23,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpPressed(_ sender: Any) {
         
         attemptCreateUser()
-        
-        nameTextField.text! = ""
-        emailTextField.text! = ""
-        schoolTextField.text! = ""
-        passwordTextField.text! = ""
 
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -79,7 +74,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        
+        print("things12", self.schoolTextField.text!)
         db.collection("schools").document(schoolTextField.text!).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
@@ -96,6 +91,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             } else {
+                print("things", self.schoolTextField.text!)
                 db.collection("schools").document(self.schoolTextField.text!).setData([
                     "clubs" : [String](),
                     "members" : [String](),
