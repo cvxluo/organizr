@@ -27,6 +27,7 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         print("what", selectedPost)
         print("who", selectedGroup)
+
         let db = Firestore.firestore()
         
         let user = Auth.auth().currentUser!

@@ -47,6 +47,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatPowderBlue, withSecondaryColor: UIColor.flatPowderBlueDark, andContentStyle: UIContentStyle.contrast)
                 
         // Do any additional setup after loading the view, typically from a nib.
         textFieldLoginPassword.delegate = self

@@ -41,6 +41,9 @@ class ExploreViewController: UIViewController, UITextFieldDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = .none
+
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.addSubview(self.refreshControl)
@@ -60,6 +63,8 @@ class ExploreViewController: UIViewController, UITextFieldDelegate, UITableViewD
         print("333")
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell3")! as UITableViewCell!
         cell.textLabel?.text = self.groups[indexPath.row]
+        cell.textLabel!.font = UIFont.systemFont(ofSize: 24)
+
         
         return cell
     }

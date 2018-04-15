@@ -34,7 +34,9 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("fuck", selectedGroup)
+        
+        self.tableView.separatorStyle = .none
+
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.addSubview(self.refreshControl)
@@ -50,6 +52,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         print("2333")
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell6")! as UITableViewCell
         cell.textLabel?.text = self.groups[indexPath.row]["name"] as! String
+        cell.textLabel!.font = UIFont.systemFont(ofSize: 24)
         
         return cell
     }
