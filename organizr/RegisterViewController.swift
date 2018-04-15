@@ -75,9 +75,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         
         db.collection("schools").document(schoolTextField.text!).setData([
-            "clubs" : [String]()
+            "clubs" : [String](),
+            "members" : [String](),
             "lastStudent": nameTextField.text!
-        ]) { err in
+        ], options: SetOptions.merge()) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {

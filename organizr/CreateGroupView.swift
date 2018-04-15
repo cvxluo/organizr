@@ -41,12 +41,15 @@ class CreateGroupView: UIViewController, UITextFieldDelegate {
                 }
                 
                 
-                db.collection("schools").document(gotSchool).collection("clubs").document(self.groupName.text!)(getDocument { (document, error) in
+                db.collection("schools").document(gotSchool).getDocument { (document, error) in
                     if let document = document, document.exists {
                         let dataDescription = document.data()
-                        var gotClubs = dataDescription["clubs"] as! String
-                        gotClubs.append(self.groupName.text!)
+                        print(dataDescription)
+                        var gotClubs = dataDescription["clubs"] as! [String]
+                        print("howdyyalllll", gotClubs)
                         
+                        gotClubs.append(self.groupName.text!)
+                        print("why is it all fucked up", gotClubs)
                         db.collection("schools").document(gotSchool).updateData([
                             "clubs": gotClubs
                         ]) { err in
