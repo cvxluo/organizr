@@ -12,13 +12,18 @@ import FirebaseFirestore
 
 class CreatePostView: UIViewController, UITextFieldDelegate {
     
+    var selectedGroup: String!
+    
     @IBOutlet weak var postName: UITextField!
     
     @IBOutlet weak var postDescription: UITextField!
     
+
     @IBAction func createPostPressed(_ sender: Any) {
         
-        let currentDateTime = Date
+    
+        
+        let currentDateTime = Date()
         
         let db = Firestore.firestore()
         
@@ -90,6 +95,7 @@ class CreatePostView: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(selectedGroup)
         
     }
     

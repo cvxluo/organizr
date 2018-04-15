@@ -216,7 +216,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VaY-bT-vSV">
                             <connections>
-                                <segue destination="fA0-0A-7pB" kind="presentation" id="Rtn-eh-bHk"/>
+                                <segue destination="fA0-0A-7pB" kind="presentation" id="Tla-HE-p4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -228,10 +228,10 @@
             </objects>
             <point key="canvasLocation" x="4681" y="2319"/>
         </scene>
-        <!--Create Post View-->
+        <!--CreatePostView-->
         <scene sceneID="iWQ-n4-8eP">
             <objects>
-                <viewController id="fA0-0A-7pB" customClass="CreatePostView" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreatePostView" title="CreatePostView" id="fA0-0A-7pB" customClass="CreatePostView" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rMA-ld-JVG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -632,6 +632,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L5k-rA-QMh"/>
+        <segue reference="8fB-OE-c2Z"/>
     </inferredMetricsTieBreakers>
 </document>

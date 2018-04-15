@@ -92,6 +92,16 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("testestst")
+
+        if let destination = segue.destination as? CreatePostView{
+            print("howdy")
+            destination.selectedGroup = self.selectedGroup
+            print("testestste")
+        }
+    }
 
     
 }
