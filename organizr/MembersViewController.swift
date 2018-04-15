@@ -1,4 +1,12 @@
 //
+//  MembersViewController.swift
+//  organizr
+//
+//  Created by Lincoln Roth on 4/15/18.
+//  Copyright © 2018 phs. All rights reserved.
+//
+
+//
 //  GroupFeedViewController.swift
 //  organizr
 //
@@ -11,10 +19,9 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
-class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
+class MembersViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
     
     var selectedGroup: String!
-    var i = 0
     
     @IBOutlet weak var tableView: UITableView!
     var groups = [[String: Any]]()
@@ -46,7 +53,7 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell!
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell10")! as UITableViewCell!
         print("dingdong", self.groups[indexPath.row])
         cell.textLabel?.text = self.groups[indexPath.row]["name"] as! String
         
@@ -85,31 +92,27 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
                 print(self.groups)
             }
         }
-//        db.collection("users").document(userUID).getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                let dataDescription = document.data()
-//                let gotSchool = dataDescription["school"] as! String
-//                let inClubs = dataDescription["groups"] as! [String]
-//                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
-//                    if let doc = doc, doc.exists{
-//                        let data = doc.data()
-//                        let gotClubs = data["clubs"] as! [String]
-//                        print("inClubs", inClubs)
-//                        print("gotClubs", gotClubs)
-//
-//                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
-//
-//                    }
-//                }
-//            }
-//            else {
-//                print("bad")
-//            }
-//        }
-        print("shit")
-
-        self.i = self.i + 1
-        print(i)
+        //        db.collection("users").document(userUID).getDocument { (document, error) in
+        //            if let document = document, document.exists {
+        //                let dataDescription = document.data()
+        //                let gotSchool = dataDescription["school"] as! String
+        //                let inClubs = dataDescription["groups"] as! [String]
+        //                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
+        //                    if let doc = doc, doc.exists{
+        //                        let data = doc.data()
+        //                        let gotClubs = data["clubs"] as! [String]
+        //                        print("inClubs", inClubs)
+        //                        print("gotClubs", gotClubs)
+        //
+        //                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
+        //
+        //                    }
+        //                }
+        //            }
+        //            else {
+        //                print("bad")
+        //            }
+        //        }
         
         self.tableView.reloadData()
         refreshControl.endRefreshing()
@@ -117,7 +120,7 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("testestst")
-
+        
         if let destination = segue.destination as? CreatePostView{
             print("howdy")
             destination.selectedGroup = self.selectedGroup
@@ -136,6 +139,6 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
             groupfeed.selectedGroup = self.selectedGroup
         }
     }
-
+    
     
 }

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="HiraginoKakuGothic.ttc">
-            <string>HiraginoSans-W3</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -140,7 +135,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-xg-AFn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="187" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="187" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mXI-up-EbO"/>
                                 </constraints>
@@ -164,7 +159,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-ih-O01" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="268" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="268" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3Hr-Dy-arh"/>
                                 </constraints>
@@ -249,7 +244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-gn-W3x" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="155" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="155" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="aps-Rw-XQn"/>
                                 </constraints>
@@ -273,7 +268,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-pf-SmS" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="302" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="302" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hME-wD-txW"/>
                                 </constraints>
@@ -297,7 +292,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foN-cP-dx6" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="384" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="384" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="R5s-Cj-p16"/>
                                 </constraints>
@@ -321,7 +316,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-T0-hTd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="86" y="225" width="203" height="30"/>
+                                <rect key="frame" x="152.5" y="225" width="70" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nXb-Mr-5iO"/>
                                 </constraints>
@@ -510,7 +505,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-kw-MmH" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="58" y="206" width="258" height="38"/>
+                                <rect key="frame" x="123" y="206" width="114" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="gMM-T1-Gax"/>
                                 </constraints>
@@ -539,7 +534,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50K-rV-T4O" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="52" y="314" width="269" height="39"/>
+                                <rect key="frame" x="52" y="314" width="255" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="dZh-K1-32f"/>
                                 </constraints>
@@ -562,7 +557,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDL-cg-1fg" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="84" y="539" width="206" height="81"/>
+                                <rect key="frame" x="84" y="539" width="192" height="81"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -613,7 +608,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-Ep-AL0" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="91" y="394" width="191" height="101"/>
+                                <rect key="frame" x="91" y="394" width="177" height="101"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -701,7 +696,49 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3869.5999999999999" y="1477.5112443778112"/>
+            <point key="canvasLocation" x="3998" y="1164"/>
+        </scene>
+        <!--Members View Controller-->
+        <scene sceneID="s8U-Uz-uHR">
+            <objects>
+                <viewController id="B82-A6-H17" customClass="MembersViewController" customModule="organizr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dpc-dA-gkM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PGP-xQ-Ydp">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell10" id="TGu-Af-XYs">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TGu-Af-XYs" id="VgJ-6I-fqs">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Swu-8a-wXf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F3w-gS-c5v">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="hES-nO-M87">
+                            <connections>
+                                <action selector="back:" destination="B82-A6-H17" id="SUp-cf-pX3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="PGP-xQ-Ydp" id="HhN-eT-gjW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1N-Th-jbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4908" y="1854.4227886056974"/>
         </scene>
         <!--Group Feed View Controller-->
         <scene sceneID="O70-Sw-pQA">
@@ -744,11 +781,18 @@
                                 <action selector="back:" destination="MBU-tg-12Z" id="SE7-RS-zEB"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VaY-bT-vSV">
-                            <connections>
-                                <segue destination="fA0-0A-7pB" kind="presentation" id="Tla-HE-p4b"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="VaY-bT-vSV">
+                                <connections>
+                                    <segue destination="fA0-0A-7pB" kind="presentation" id="Tla-HE-p4b"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Members" id="3Vg-a3-pvv">
+                                <connections>
+                                    <segue destination="H36-Nx-7kr" kind="presentation" id="7nq-uf-Kaa"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ZVJ-eO-nea" id="qti-xn-4Xv"/>
@@ -756,7 +800,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dC7-su-0Pl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4681" y="2319"/>
+            <point key="canvasLocation" x="5620" y="2318.5907046476764"/>
         </scene>
         <!--CreatePostView-->
         <scene sceneID="iWQ-n4-8eP">
@@ -767,7 +811,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TV-rl-SBu" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68" y="192" width="238" height="50"/>
+                                <rect key="frame" x="132" y="192" width="110.5" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eZ1-HM-isX"/>
                                 </constraints>
@@ -799,7 +843,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iP7-X9-z6f" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="68" y="318" width="238" height="65"/>
+                                <rect key="frame" x="132" y="318" width="110.5" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Qbi-rv-BCs"/>
                                 </constraints>
@@ -1196,7 +1240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rE-xU-P0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6580" y="1414.5427286356824"/>
+            <point key="canvasLocation" x="7519.1999999999998" y="1414.5427286356824"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="dG3-rq-04C">
@@ -1361,14 +1405,11 @@
                                 <action selector="signOutDidPress:" destination="uPW-9z-BbH" id="yUi-VB-uSD"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="VU8-XP-JlQ">
-                                <connections>
-                                    <segue destination="c16-Rn-sBb" kind="presentation" id="hcw-wH-Gyk"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Members" id="Xgm-x5-cc1"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VU8-XP-JlQ">
+                            <connections>
+                                <segue destination="c16-Rn-sBb" kind="presentation" id="hcw-wH-Gyk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="OBU-IP-g9N" id="elz-DO-fQU"/>
@@ -1480,11 +1521,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOD-qn-Cbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5394" y="1415"/>
+            <point key="canvasLocation" x="6332" y="1414.5427286356824"/>
+        </scene>
+        <!--MembersViewController-->
+        <scene sceneID="wYm-dl-DWL">
+            <objects>
+                <navigationController title="MembersViewController" automaticallyAdjustsScrollViewInsets="NO" id="H36-Nx-7kr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5ya-eM-gzs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B82-A6-H17" kind="relationship" relationship="rootViewController" id="mGj-ra-mhM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kx5-AS-TW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="1917"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hcw-wH-Gyk"/>
         <segue reference="L5k-rA-QMh"/>
         <segue reference="bnV-1x-aCd"/>
         <segue reference="UfJ-4N-e2F"/>
