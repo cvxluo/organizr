@@ -37,10 +37,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         self.tableView.addSubview(self.refreshControl)
     }
     
-    @IBAction func back(_ sender: Any) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
-    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("2111")
         return self.groups.count;
@@ -48,7 +45,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell!
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell5")! as UITableViewCell
         cell.textLabel?.text = self.groups[indexPath.row]
         
         return cell

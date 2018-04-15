@@ -67,6 +67,15 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
         let userUID = user.uid
         
         print("bull")
+        db.collection("groups").document(selectedGroup).collection("posts").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
@@ -89,8 +98,9 @@ class GroupFeedViewController: UIViewController, UITextFieldDelegate, UITableVie
             }
         }
         print("shit")
+        print("1 shit", groups)
         groups.append("howdy yall")
-        print(groups)
+        print("2 shit", groups)
         self.i = self.i + 1
         print(i)
         
