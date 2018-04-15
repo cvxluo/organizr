@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HiraginoKakuGothic.ttc">
+            <string>HiraginoSans-W3</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,9 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xos-X1-Apg" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xos-X1-Apg" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="97" y="367" width="181" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -70,9 +75,8 @@
                                     <outletCollection property="gestureRecognizers" destination="bwE-4f-lLn" appends="YES" id="SRS-8a-vKP"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-Nx-0Uw" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-Nx-0Uw" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="83" y="502" width="209" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -125,16 +129,20 @@
                                     <outletCollection property="gestureRecognizers" destination="ori-nI-xhl" appends="YES" id="x3T-JT-9Zy"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Organizr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-lC-TaS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organizr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-lC-TaS">
                                 <rect key="frame" x="58" y="70" width="259" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="10b-gI-g96"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-xg-AFn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ap8-xg-AFn" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="187" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WR4-I7-QRv"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartQuotesType="no"/>
@@ -146,11 +154,19 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-ih-O01" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-ih-O01" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="268" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4I9-fz-yq0"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" smartQuotesType="no"/>
@@ -162,12 +178,40 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uBK-lC-TaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3m7-pw-hKY"/>
+                            <constraint firstItem="ap8-xg-AFn" firstAttribute="top" secondItem="uBK-lC-TaS" secondAttribute="bottom" constant="59" id="7ZX-3P-X8q"/>
+                            <constraint firstItem="xos-X1-Apg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="Ewy-OU-0W3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qlx-Nx-0Uw" secondAttribute="bottom" constant="69" id="Oyo-HV-sGq"/>
+                            <constraint firstItem="ap8-xg-AFn" firstAttribute="trailing" secondItem="IG5-ih-O01" secondAttribute="trailing" id="RXt-t5-BPb"/>
+                            <constraint firstItem="IG5-ih-O01" firstAttribute="top" secondItem="ap8-xg-AFn" secondAttribute="bottom" constant="51" id="Vds-td-AM0"/>
+                            <constraint firstItem="qlx-Nx-0Uw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="ZsC-YG-IIH"/>
+                            <constraint firstItem="uBK-lC-TaS" firstAttribute="centerX" secondItem="ap8-xg-AFn" secondAttribute="centerX" id="epY-gK-ped"/>
+                            <constraint firstItem="uBK-lC-TaS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="gry-oO-baA"/>
+                            <constraint firstItem="xos-X1-Apg" firstAttribute="top" secondItem="IG5-ih-O01" secondAttribute="bottom" constant="69" id="nZj-ts-g4n"/>
+                            <constraint firstItem="qlx-Nx-0Uw" firstAttribute="top" secondItem="xos-X1-Apg" secondAttribute="bottom" constant="39" id="peF-LN-xxb"/>
+                            <constraint firstItem="ap8-xg-AFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="sQG-58-1mb"/>
+                            <constraint firstItem="xos-X1-Apg" firstAttribute="centerX" secondItem="qlx-Nx-0Uw" secondAttribute="centerX" id="ttq-Ax-XHH"/>
+                            <constraint firstItem="qlx-Nx-0Uw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="502" id="vzs-fD-9su"/>
+                            <constraint firstItem="ap8-xg-AFn" firstAttribute="leading" secondItem="IG5-ih-O01" secondAttribute="leading" id="ymH-iU-geE"/>
+                            <constraint firstItem="uBK-lC-TaS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="zJh-bK-Gjv"/>
+                            <constraint firstItem="IG5-ih-O01" firstAttribute="centerX" secondItem="xos-X1-Apg" secondAttribute="centerX" id="zjD-x6-94U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="textFieldLoginEmail" destination="ap8-xg-AFn" id="Orn-Zp-FgP"/>
                         <outlet property="textFieldLoginPassword" destination="IG5-ih-O01" id="uc3-OD-1Of"/>
@@ -195,16 +239,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiO-Ld-ggU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiO-Ld-ggU">
                                 <rect key="frame" x="58" y="60" width="259" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="6uw-oc-eiH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-gn-W3x" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WfP-gn-W3x" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="155" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nUw-uW-Igu"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartQuotesType="no"/>
@@ -216,11 +264,19 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Name"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-pf-SmS" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Abh-pf-SmS" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="302" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QtG-48-pdo"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartQuotesType="no"/>
@@ -232,11 +288,19 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="School"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foN-cP-dx6" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="foN-cP-dx6" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="384" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0d5-34-qI9"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES" smartQuotesType="no"/>
@@ -248,11 +312,19 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Password"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-T0-hTd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-T0-hTd" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="86" y="225" width="203" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uu7-t3-CrJ"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" smartQuotesType="no"/>
@@ -264,11 +336,16 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qng-RX-AmS" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qng-RX-AmS" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="105" y="468" width="164" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -321,9 +398,8 @@
                                     <outletCollection property="gestureRecognizers" destination="Ig8-kb-bMG" appends="YES" id="JsH-Fg-M5E"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Es-Y9K" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lq3-Es-Y9K" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="122" y="569" width="131" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -375,8 +451,36 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qng-RX-AmS" firstAttribute="centerX" secondItem="lq3-Es-Y9K" secondAttribute="centerX" id="0h5-Zl-vVr"/>
+                            <constraint firstItem="Abh-pf-SmS" firstAttribute="leading" secondItem="foN-cP-dx6" secondAttribute="leading" id="63u-5r-o5P"/>
+                            <constraint firstItem="foN-cP-dx6" firstAttribute="top" secondItem="Abh-pf-SmS" secondAttribute="bottom" constant="52" id="6eu-iX-Qy6"/>
+                            <constraint firstItem="Qng-RX-AmS" firstAttribute="top" secondItem="foN-cP-dx6" secondAttribute="bottom" constant="54" id="7ec-iL-eyA"/>
+                            <constraint firstItem="Qng-RX-AmS" firstAttribute="leading" secondItem="tLK-jt-CAC" secondAttribute="leading" constant="105" id="8u4-pb-2Ab"/>
+                            <constraint firstItem="lq3-Es-Y9K" firstAttribute="top" secondItem="Qng-RX-AmS" secondAttribute="bottom" constant="26" id="AH9-K2-l4S"/>
+                            <constraint firstItem="qiO-Ld-ggU" firstAttribute="leading" secondItem="tLK-jt-CAC" secondAttribute="leading" constant="58" id="Hd9-uQ-dNU"/>
+                            <constraint firstItem="fRm-T0-hTd" firstAttribute="top" secondItem="WfP-gn-W3x" secondAttribute="bottom" constant="40" id="JWh-oD-Yjz"/>
+                            <constraint firstItem="WfP-gn-W3x" firstAttribute="trailing" secondItem="fRm-T0-hTd" secondAttribute="trailing" id="KG3-s5-FFm"/>
+                            <constraint firstItem="lq3-Es-Y9K" firstAttribute="top" secondItem="6L5-2X-rMj" secondAttribute="top" constant="569" id="Mz2-9P-6hW"/>
+                            <constraint firstItem="fRm-T0-hTd" firstAttribute="trailing" secondItem="Abh-pf-SmS" secondAttribute="trailing" id="Uwf-hJ-9fo"/>
+                            <constraint firstItem="WfP-gn-W3x" firstAttribute="top" secondItem="qiO-Ld-ggU" secondAttribute="bottom" constant="37" id="Z3V-PT-f1g"/>
+                            <constraint firstItem="qiO-Ld-ggU" firstAttribute="top" secondItem="tLK-jt-CAC" secondAttribute="top" constant="40" id="aFo-KO-xnr"/>
+                            <constraint firstItem="Qng-RX-AmS" firstAttribute="centerX" secondItem="6L5-2X-rMj" secondAttribute="centerX" id="bcU-7g-Pse"/>
+                            <constraint firstItem="foN-cP-dx6" firstAttribute="centerX" secondItem="Qng-RX-AmS" secondAttribute="centerX" id="dai-Td-kGr"/>
+                            <constraint firstItem="WfP-gn-W3x" firstAttribute="leading" secondItem="tLK-jt-CAC" secondAttribute="leading" constant="86" id="dvv-a6-IZE"/>
+                            <constraint firstItem="Abh-pf-SmS" firstAttribute="top" secondItem="fRm-T0-hTd" secondAttribute="bottom" constant="47" id="gze-iw-RYu"/>
+                            <constraint firstItem="tLK-jt-CAC" firstAttribute="bottom" secondItem="lq3-Es-Y9K" secondAttribute="bottom" constant="29" id="nkG-tH-Abm"/>
+                            <constraint firstItem="lq3-Es-Y9K" firstAttribute="leading" secondItem="tLK-jt-CAC" secondAttribute="leading" constant="122" id="sI9-wi-YF9"/>
+                            <constraint firstItem="fRm-T0-hTd" firstAttribute="leading" secondItem="Abh-pf-SmS" secondAttribute="leading" id="smd-7F-08D"/>
+                            <constraint firstItem="WfP-gn-W3x" firstAttribute="leading" secondItem="fRm-T0-hTd" secondAttribute="leading" id="tfj-XP-3Gm"/>
+                            <constraint firstItem="qiO-Ld-ggU" firstAttribute="centerX" secondItem="WfP-gn-W3x" secondAttribute="centerX" id="uH0-Zi-4ng"/>
+                            <constraint firstItem="Abh-pf-SmS" firstAttribute="trailing" secondItem="foN-cP-dx6" secondAttribute="trailing" id="vAY-PB-BsM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tLK-jt-CAC"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="emailTextField" destination="fRm-T0-hTd" id="QVb-OG-0R0"/>
                         <outlet property="nameTextField" destination="WfP-gn-W3x" id="ceD-P3-3IZ"/>
@@ -406,9 +510,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-kw-MmH" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ZZ-kw-MmH" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="58" y="206" width="258" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="7vt-5U-rsf"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -419,18 +525,28 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-pf-QDA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dL-pf-QDA">
                                 <rect key="frame" x="52" y="76" width="270" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="eo6-fy-BXM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50K-rV-T4O" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
-                                <rect key="frame" x="53" y="331" width="269" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Group Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50K-rV-T4O" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                                <rect key="frame" x="52" y="314" width="269" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Lpn-l3-YIM"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
@@ -441,11 +557,68 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-Ep-AL0" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="78" y="462" width="219" height="115"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fDL-cg-1fg" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="84" y="539" width="206" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.92377263310000002" green="0.20531430840000001" blue="0.23741775749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.8132666945" green="0.57986682649999999" blue="0.063586659729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientRotation">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Cancel"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticalOrientation" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightIconFontSize">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightIconFontName" value="fa"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightIconString" value="backward"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingLeading">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lzN-D4-u9F" appends="YES" id="ldr-vo-XVk"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-Ep-AL0" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="91" y="394" width="191" height="101"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -497,6 +670,20 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8ZZ-kw-MmH" firstAttribute="centerX" secondItem="50K-rV-T4O" secondAttribute="centerX" id="BvU-Qt-bcJ"/>
+                            <constraint firstItem="9dL-pf-QDA" firstAttribute="centerX" secondItem="8ZZ-kw-MmH" secondAttribute="centerX" id="Hf2-VM-erN"/>
+                            <constraint firstItem="8ZZ-kw-MmH" firstAttribute="top" secondItem="9dL-pf-QDA" secondAttribute="bottom" constant="72" id="LsP-wG-7DJ"/>
+                            <constraint firstItem="50K-rV-T4O" firstAttribute="centerX" secondItem="Ogk-Ep-AL0" secondAttribute="centerX" id="O3X-xj-lCJ"/>
+                            <constraint firstItem="Ogk-Ep-AL0" firstAttribute="leading" secondItem="zyL-Dg-nSv" secondAttribute="leading" constant="78" id="Sqe-MG-qxv"/>
+                            <constraint firstItem="9dL-pf-QDA" firstAttribute="centerX" secondItem="HtY-Ay-TJ6" secondAttribute="centerX" id="cSg-La-lFZ"/>
+                            <constraint firstItem="9dL-pf-QDA" firstAttribute="top" secondItem="zyL-Dg-nSv" secondAttribute="top" constant="56" id="frq-wM-CxB"/>
+                            <constraint firstItem="8ZZ-kw-MmH" firstAttribute="leading" secondItem="zyL-Dg-nSv" secondAttribute="leading" constant="58" id="h9W-Ik-SDQ"/>
+                            <constraint firstItem="9dL-pf-QDA" firstAttribute="trailing" secondItem="50K-rV-T4O" secondAttribute="trailing" id="hg3-DX-1ha"/>
+                            <constraint firstItem="zyL-Dg-nSv" firstAttribute="bottom" secondItem="Ogk-Ep-AL0" secondAttribute="bottom" constant="90" id="uRr-JO-abK"/>
+                            <constraint firstItem="Ogk-Ep-AL0" firstAttribute="top" secondItem="50K-rV-T4O" secondAttribute="bottom" constant="92" id="wBd-Bi-VDk"/>
+                            <constraint firstItem="50K-rV-T4O" firstAttribute="top" secondItem="8ZZ-kw-MmH" secondAttribute="bottom" constant="87" id="xjY-Fr-9hq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zyL-Dg-nSv"/>
                     </view>
                     <connections>
@@ -510,6 +697,11 @@
                         <action selector="createGroupPressed:" destination="c16-Rn-sBb" id="Vsq-HL-5VI"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="lzN-D4-u9F">
+                    <connections>
+                        <segue destination="FaZ-Q3-HEs" kind="presentation" id="bnV-1x-aCd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3869.5999999999999" y="1477.5112443778112"/>
         </scene>
@@ -521,9 +713,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVJ-eO-nea">
-                                <rect key="frame" x="16" y="64" width="343" height="583"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZVJ-eO-nea">
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell5" id="vFU-bD-RXO">
@@ -541,6 +732,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZVJ-eO-nea" secondAttribute="bottom" constant="20" symbolic="YES" id="GKs-zr-t1N"/>
+                            <constraint firstItem="ZVJ-eO-nea" firstAttribute="leading" secondItem="Xgj-hJ-buV" secondAttribute="leadingMargin" id="IPs-4u-cQ8"/>
+                            <constraint firstItem="ZVJ-eO-nea" firstAttribute="trailing" secondItem="Xgj-hJ-buV" secondAttribute="trailingMargin" id="NR0-5Q-4w9"/>
+                            <constraint firstItem="ZVJ-eO-nea" firstAttribute="top" secondItem="kZp-PR-y4o" secondAttribute="top" id="w35-TB-COi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kZp-PR-y4o"/>
                     </view>
                     <navigationItem key="navigationItem" id="pRV-UJ-jh3">
@@ -571,9 +768,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TV-rl-SBu" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TV-rl-SBu" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="68" y="192" width="238" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aiG-59-CTR"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -584,18 +783,28 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.23293566703796387" green="0.072874628007411957" blue="0.39058780670166016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-Aj-5UN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-Aj-5UN">
                                 <rect key="frame" x="52" y="69" width="270" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="jNY-9j-TAb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iP7-X9-z6f" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iP7-X9-z6f" customClass="SkyFloatingLabelTextField" customModule="SkyFloatingLabelTextField">
                                 <rect key="frame" x="68" y="318" width="238" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="vEQ-pp-HAx"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -606,11 +815,68 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                         <color key="value" red="0.23293566703796387" green="0.072874628007411957" blue="0.39058780670166016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SvO-CF-Bkc" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="78" y="490" width="219" height="115"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r7l-bZ-2Ib" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="84" y="566" width="206" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" red="0.92377263310000002" green="0.20531430840000001" blue="0.23741775749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" red="0.8132666945" green="0.57986682649999999" blue="0.063586659729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="gradientRotation">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fullyRoundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Cancel"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleFontSize">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticalOrientation" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightIconFontSize">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightIconFontName" value="fa"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="rightIconString" value="backward"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="spacingLeading">
+                                        <real key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PsX-M8-aON" appends="YES" id="Oum-lh-SUg"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SvO-CF-Bkc" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="91" y="420" width="192" height="101"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -662,6 +928,21 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SvO-CF-Bkc" firstAttribute="top" secondItem="rMA-ld-JVG" secondAttribute="top" constant="490" id="5WP-2z-8z9"/>
+                            <constraint firstItem="gyh-Aj-5UN" firstAttribute="centerX" secondItem="4TV-rl-SBu" secondAttribute="centerX" id="7t5-My-cS8"/>
+                            <constraint firstItem="4TV-rl-SBu" firstAttribute="top" secondItem="gyh-Aj-5UN" secondAttribute="bottom" constant="65" id="830-4H-i90"/>
+                            <constraint firstItem="4TV-rl-SBu" firstAttribute="leading" secondItem="vo4-2m-1Z5" secondAttribute="leading" constant="68" id="C37-0x-nBP"/>
+                            <constraint firstItem="4TV-rl-SBu" firstAttribute="trailing" secondItem="iP7-X9-z6f" secondAttribute="trailing" id="DAu-em-xbK"/>
+                            <constraint firstItem="gyh-Aj-5UN" firstAttribute="centerX" secondItem="rMA-ld-JVG" secondAttribute="centerX" id="GSs-Yl-gLu"/>
+                            <constraint firstItem="gyh-Aj-5UN" firstAttribute="top" secondItem="vo4-2m-1Z5" secondAttribute="top" constant="49" id="Pi5-mU-2op"/>
+                            <constraint firstItem="gyh-Aj-5UN" firstAttribute="leading" secondItem="vo4-2m-1Z5" secondAttribute="leading" constant="52" id="T7d-WJ-lSu"/>
+                            <constraint firstItem="vo4-2m-1Z5" firstAttribute="bottom" secondItem="SvO-CF-Bkc" secondAttribute="bottom" constant="62" id="Tjv-xj-Z2Y"/>
+                            <constraint firstItem="iP7-X9-z6f" firstAttribute="centerX" secondItem="SvO-CF-Bkc" secondAttribute="centerX" id="U6L-a5-PO1"/>
+                            <constraint firstItem="4TV-rl-SBu" firstAttribute="leading" secondItem="iP7-X9-z6f" secondAttribute="leading" id="WpQ-lE-5bf"/>
+                            <constraint firstItem="SvO-CF-Bkc" firstAttribute="leading" secondItem="vo4-2m-1Z5" secondAttribute="leading" constant="78" id="qiO-Iu-5dV"/>
+                            <constraint firstItem="iP7-X9-z6f" firstAttribute="top" secondItem="4TV-rl-SBu" secondAttribute="bottom" constant="76" id="y3w-Px-5Qj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vo4-2m-1Z5"/>
                     </view>
                     <connections>
@@ -675,6 +956,11 @@
                         <action selector="createPostPressed:" destination="fA0-0A-7pB" id="O3z-df-i0s"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="PsX-M8-aON">
+                    <connections>
+                        <segue destination="MBU-tg-12Z" kind="presentation" id="9gh-zj-K7X"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4680.8000000000002" y="3113.7931034482763"/>
         </scene>
@@ -686,16 +972,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-Zr-DEP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NS6-Zr-DEP">
                                 <rect key="frame" x="58" y="90" width="259" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="OzX-hY-hu9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t3u-ib-u6l" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3u-ib-u6l" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="111" y="395" width="153" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -741,10 +1028,12 @@
                                         <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TJp-y0-iso" appends="YES" id="t5o-uX-Gig"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3qu-vH-sVk" customClass="LGButton" customModule="LGButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qu-vH-sVk" customClass="LGButton" customModule="LGButton">
                                 <rect key="frame" x="84" y="512" width="206" height="81"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
@@ -791,19 +1080,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Vze-yy-a7m" appends="YES" id="e8S-mW-Gru"/>
-                                    <outletCollection property="gestureRecognizers" destination="4Rz-yl-tXa" appends="YES" id="CfT-5O-cFK"/>
+                                    <outletCollection property="gestureRecognizers" destination="9mz-EF-Qhi" appends="YES" id="cb3-05-CCR"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-By-RnC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-By-RnC">
                                 <rect key="frame" x="22" y="237" width="330" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="pTT-ey-FMF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NS6-Zr-DEP" firstAttribute="top" secondItem="tNJ-A5-gum" secondAttribute="top" constant="70" id="0f5-cl-9w0"/>
+                            <constraint firstItem="Rxt-By-RnC" firstAttribute="centerX" secondItem="t3u-ib-u6l" secondAttribute="centerX" id="1pP-tu-1nh"/>
+                            <constraint firstItem="t3u-ib-u6l" firstAttribute="leading" secondItem="tNJ-A5-gum" secondAttribute="leading" constant="111" id="7Zw-rV-XwQ"/>
+                            <constraint firstItem="3qu-vH-sVk" firstAttribute="top" secondItem="t3u-ib-u6l" secondAttribute="bottom" constant="36" id="92o-tu-qJo"/>
+                            <constraint firstItem="NS6-Zr-DEP" firstAttribute="leading" secondItem="tNJ-A5-gum" secondAttribute="leading" constant="58" id="P6b-Fp-rCN"/>
+                            <constraint firstItem="Rxt-By-RnC" firstAttribute="centerX" secondItem="sJ6-W8-RxS" secondAttribute="centerX" id="U4B-kF-TR4"/>
+                            <constraint firstItem="t3u-ib-u6l" firstAttribute="centerX" secondItem="3qu-vH-sVk" secondAttribute="centerX" id="Uco-Lw-WmH"/>
+                            <constraint firstItem="3qu-vH-sVk" firstAttribute="top" secondItem="sJ6-W8-RxS" secondAttribute="top" constant="512" id="cwE-5a-lgF"/>
+                            <constraint firstItem="3qu-vH-sVk" firstAttribute="leading" secondItem="tNJ-A5-gum" secondAttribute="leading" constant="84" id="gLX-Wb-uSC"/>
+                            <constraint firstItem="NS6-Zr-DEP" firstAttribute="centerX" secondItem="Rxt-By-RnC" secondAttribute="centerX" id="hYc-ri-7Pd"/>
+                            <constraint firstItem="t3u-ib-u6l" firstAttribute="top" secondItem="sJ6-W8-RxS" secondAttribute="top" constant="395" id="jpB-yV-oKN"/>
+                            <constraint firstItem="Rxt-By-RnC" firstAttribute="leading" secondItem="tNJ-A5-gum" secondAttribute="leading" constant="22" id="l2k-Du-uGy"/>
+                            <constraint firstItem="tNJ-A5-gum" firstAttribute="bottom" secondItem="3qu-vH-sVk" secondAttribute="bottom" constant="74" id="w51-Hs-GMD"/>
+                            <constraint firstItem="Rxt-By-RnC" firstAttribute="top" secondItem="NS6-Zr-DEP" secondAttribute="bottom" constant="89" id="zU2-9U-V9n"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tNJ-A5-gum"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oi2-nb-7fi">
@@ -815,14 +1121,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdr-mM-QLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Vze-yy-a7m">
+                <tapGestureRecognizer id="9mz-EF-Qhi">
                     <connections>
-                        <action selector="joinClubPressed:" destination="L8t-Ip-Gqj" id="JJd-g6-3sd"/>
+                        <action selector="backPressed:" destination="L8t-Ip-Gqj" id="wXF-WJ-3hc"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="4Rz-yl-tXa">
+                <tapGestureRecognizer id="TJp-y0-iso">
                     <connections>
-                        <action selector="backPressed:" destination="L8t-Ip-Gqj" id="xWg-Xx-p0U"/>
+                        <action selector="joinClubPressed:" destination="L8t-Ip-Gqj" id="pWs-Ac-Srv"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -836,29 +1142,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9k-vM-kAP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9k-vM-kAP">
                                 <rect key="frame" x="58" y="104" width="259" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="LBz-XG-NL8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3Q-V4-5zr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3Q-V4-5zr">
                                 <rect key="frame" x="58" y="334" width="259" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="38L-Au-0kv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnV-AU-jmz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnV-AU-jmz">
                                 <rect key="frame" x="103" y="626" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="q9k-vM-kAP" firstAttribute="centerX" secondItem="btj-e1-rnD" secondAttribute="centerX" id="2iQ-nY-6ww"/>
+                            <constraint firstItem="NnV-AU-jmz" firstAttribute="leading" secondItem="5aX-QJ-6Sy" secondAttribute="leading" constant="103" id="ANi-Z6-h0y"/>
+                            <constraint firstItem="q9k-vM-kAP" firstAttribute="trailing" secondItem="W3Q-V4-5zr" secondAttribute="trailing" id="FbU-LH-NpW"/>
+                            <constraint firstAttribute="bottom" secondItem="NnV-AU-jmz" secondAttribute="bottom" constant="20" symbolic="YES" id="JdP-1V-T1i"/>
+                            <constraint firstAttribute="bottom" secondItem="W3Q-V4-5zr" secondAttribute="bottom" constant="275" id="M96-2G-8Pz"/>
+                            <constraint firstItem="W3Q-V4-5zr" firstAttribute="centerX" secondItem="NnV-AU-jmz" secondAttribute="centerX" id="W3d-gb-9O0"/>
+                            <constraint firstItem="q9k-vM-kAP" firstAttribute="leading" secondItem="W3Q-V4-5zr" secondAttribute="leading" id="XMs-ut-w5Y"/>
+                            <constraint firstItem="q9k-vM-kAP" firstAttribute="top" secondItem="5aX-QJ-6Sy" secondAttribute="top" constant="40" id="b91-TL-ba5"/>
+                            <constraint firstItem="q9k-vM-kAP" firstAttribute="leading" secondItem="5aX-QJ-6Sy" secondAttribute="leading" constant="58" id="pL6-vh-0ws"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5aX-QJ-6Sy"/>
                     </view>
                     <navigationItem key="navigationItem" id="N7h-rA-jv9">
@@ -886,9 +1206,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4d-Zc-gJY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4d-Zc-gJY">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell3" id="dpx-pZ-15x">
@@ -906,9 +1225,21 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w4d-Zc-gJY" firstAttribute="top" secondItem="LEi-ET-1E0" secondAttribute="top" id="TvE-5O-mRH"/>
+                            <constraint firstItem="w4d-Zc-gJY" firstAttribute="trailing" secondItem="X7U-m4-jOd" secondAttribute="trailingMargin" id="hxz-sr-hXN"/>
+                            <constraint firstItem="w4d-Zc-gJY" firstAttribute="bottom" secondItem="LEi-ET-1E0" secondAttribute="bottom" id="wRo-eb-thV"/>
+                            <constraint firstItem="w4d-Zc-gJY" firstAttribute="leading" secondItem="X7U-m4-jOd" secondAttribute="leadingMargin" id="wex-x8-cg3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="LEi-ET-1E0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="g5T-tu-irE"/>
+                    <navigationItem key="navigationItem" id="g5T-tu-irE">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="mCr-W9-naJ">
+                            <connections>
+                                <action selector="signOutPressed:" destination="fpZ-Zo-zyh" id="mTF-2u-fm5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="w4d-Zc-gJY" id="XOe-IF-ZfD"/>
                     </connections>
@@ -928,6 +1259,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="rIO-ec-VXj" kind="relationship" relationship="rootViewController" id="Nzv-tD-lYY"/>
                     </connections>
@@ -944,9 +1278,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RL4-bH-Yzt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RL4-bH-Yzt">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell6" id="W09-1d-uw4">
@@ -964,6 +1297,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RL4-bH-Yzt" firstAttribute="leading" secondItem="cJ1-yo-W2b" secondAttribute="leadingMargin" id="JKV-I2-n37"/>
+                            <constraint firstItem="RL4-bH-Yzt" firstAttribute="top" secondItem="hnr-AB-3re" secondAttribute="top" id="aGE-Yi-06z"/>
+                            <constraint firstItem="RL4-bH-Yzt" firstAttribute="bottom" secondItem="hnr-AB-3re" secondAttribute="bottom" id="bMP-uj-nhc"/>
+                            <constraint firstItem="RL4-bH-Yzt" firstAttribute="trailing" secondItem="cJ1-yo-W2b" secondAttribute="trailingMargin" id="kvR-0T-jXX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hnr-AB-3re"/>
                     </view>
                     <navigationItem key="navigationItem" id="rjg-ng-1tG">
@@ -989,9 +1328,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-IP-g9N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-IP-g9N">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="XN9-TP-gOP">
@@ -1009,6 +1347,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OBU-IP-g9N" firstAttribute="top" secondItem="gR2-IL-8G8" secondAttribute="top" id="8F8-pw-IgN"/>
+                            <constraint firstItem="OBU-IP-g9N" firstAttribute="trailing" secondItem="M0b-pM-4S1" secondAttribute="trailingMargin" id="97D-wr-Cb0"/>
+                            <constraint firstItem="OBU-IP-g9N" firstAttribute="leading" secondItem="M0b-pM-4S1" secondAttribute="leadingMargin" id="EwC-rQ-pXM"/>
+                            <constraint firstItem="OBU-IP-g9N" firstAttribute="bottom" secondItem="gR2-IL-8G8" secondAttribute="bottom" id="aPR-WN-RkO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gR2-IL-8G8"/>
                     </view>
                     <navigationItem key="navigationItem" id="wfQ-9W-gaP">
@@ -1042,6 +1386,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="uPW-9z-BbH" kind="relationship" relationship="rootViewController" id="R0i-xi-CsE"/>
                     </connections>
@@ -1059,6 +1406,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="k9m-oz-Ugi" kind="relationship" relationship="viewControllers" id="B9c-7C-oEK"/>
@@ -1081,6 +1432,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="fpZ-Zo-zyh" kind="relationship" relationship="rootViewController" id="WoP-jK-bxY"/>
                     </connections>
@@ -1128,5 +1482,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="L5k-rA-QMh"/>
+        <segue reference="CfY-4i-KMu"/>
+        <segue reference="9gh-zj-K7X"/>
     </inferredMetricsTieBreakers>
 </document>

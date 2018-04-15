@@ -23,7 +23,6 @@
 		E8C0085A2082F9DF008CBE5A /* GroupFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */; };
 		E8E69A8A2083054500615C6A /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E69A892083054500615C6A /* PostViewController.swift */; };
 		E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F09208275B80000456C /* GroupsViewController.swift */; };
-		E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F07F0B208275D20000456C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedViewController.swift; sourceTree = "<group>"; };
 		E8E69A892083054500615C6A /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E8F07F09208275B80000456C /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
-		E8F07F0B208275D20000456C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F176CFCD111F18241F9B091B /* Pods-organizr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-organizr.release.xcconfig"; path = "Pods/Target Support Files/Pods-organizr/Pods-organizr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +110,6 @@
 				4643007F20826004005BCE85 /* GoogleService-Info.plist */,
 				4643008120826154005BCE85 /* FeedViewController.swift */,
 				E8F07F09208275B80000456C /* GroupsViewController.swift */,
-				E8F07F0B208275D20000456C /* SettingsViewController.swift */,
 				E8C00855208297BD008CBE5A /* GroupViewerViewController.swift */,
 				E8C008572082B151008CBE5A /* ExploreViewController.swift */,
 				E8C008592082F9DF008CBE5A /* GroupFeedViewController.swift */,
@@ -312,7 +309,6 @@
 				468DE6F42082904100D54ED1 /* CreateGroupView.swift in Sources */,
 				E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */,
 				E8C0085A2082F9DF008CBE5A /* GroupFeedViewController.swift in Sources */,
-				E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */,
 				468DE7012083035800D54ED1 /* CreatePostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,12 @@ class ExploreViewController: UIViewController, UITextFieldDelegate, UITableViewD
     
 
     
-     @IBOutlet weak var tableView: UITableView!
+    @IBAction func signOutPressed(_ sender: Any) {
+        try! Auth.auth().signOut()
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
     var groups: [String] = []
     
     lazy var refreshControl: UIRefreshControl = {
