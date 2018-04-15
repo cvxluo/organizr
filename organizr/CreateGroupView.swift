@@ -16,7 +16,6 @@ class CreateGroupView: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var groupDescription: UITextField!
     
-    
     @IBAction func createGroupPressed(_ sender: Any) {
         
         let db = Firestore.firestore()
@@ -40,28 +39,43 @@ class CreateGroupView: UIViewController, UITextFieldDelegate {
                         print("Document successfully updated")
                     }
                 }
-            db.collection("schools").document(gotSchool).collection(self.groupName.text!).document("info").setData([
-                    "name": self.groupName.text!,
-                    "description": self.groupDescription.text!,
-                    "creator" : userUID,
-                    "members" : [userUID]
-                ]) { err in
-                    if let err = err {
-                        print("Error writing document: \(err)")
-                    } else {
-                        print("Document successfully written!")
+                
+                
+                db.collection("schools").document(gotSchool).collection("clubs").document(self.groupName.text!)(getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        let dataDescription = document.data()
+                        var gotClubs = dataDescription["clubs"] as! String
+                        gotClubs.append(self.groupName.text!)
+                        
+                        db.collection("schools").document(gotSchool).updateData([
+                            "clubs": gotClubs
+                        ]) { err in
+                            if let err = err {
+                                print("Error updating document: \(err)")
+                            } else {
+                                print("Document successfully updated")
+                            }
+                        }
                     }
                 }
+            }
+        }
                 
-                
+        db.collection("groups").document(self.groupName.text!).setData([
+            "name": self.groupName.text!,
+            "description": self.groupDescription.text!,
+            "members": [userUID]
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
             } else {
-                print("Document does not exist")
+                print("Document successfully written!")
             }
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var vc = storyboard.instantiateViewController(withIdentifier: "Groups")
-        self.present(vc, animated: true, completion: nil)
+            
+        
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
         
  
         
@@ -82,5 +96,4 @@ class CreateGroupView: UIViewController, UITextFieldDelegate {
     
 
 }
-
 

@@ -75,29 +75,29 @@ class ExploreViewController: UIViewController, UITextFieldDelegate, UITableViewD
         let userUID = user.uid
         
         
-        
         db.collection("users").document(userUID).getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()
-                print(dataDescription["school"])
-                db.collection("schools").document(dataDescription["school"] as! String).getDocument { (doc, error) in
-                    print(doc)
+                let gotSchool = dataDescription["school"] as! String
+                let inClubs = dataDescription["groups"] as! [String]
+                db.collection("schools").document(gotSchool).getDocument { (doc, error) in
                     if let doc = doc, doc.exists{
-                        print("y'all")
                         let data = doc.data()
-                        print(data)
+                        let gotClubs = data["clubs"] as! [String]
+                        print("inClubs", inClubs)
+                        print("gotClubs", gotClubs)
+                        
+                        self.groups = Array(Set(gotClubs).subtracting(inClubs))
+                        
                     }
                 }
-                
-
-                let groupNames = dataDescription["groups"] as! [String]
-                self.groups = Array(Set(self.groups + groupNames))
-                
-            } else {
-                print("Document does not exist")
+            }
+            else {
+                print("bad")
             }
         }
-        self.groups.append("Howdy")
+        
+    
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }

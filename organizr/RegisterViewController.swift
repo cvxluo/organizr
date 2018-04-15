@@ -74,6 +74,35 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
+        db.collection("schools").document(schoolTextField.text!).setData([
+            "clubs" : [String]()
+            "lastStudent": nameTextField.text!
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        /*
+        db.collection("schools").document(schoolTextField.text!).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                gotMembers.append(self.nameTextField.text!)
+                
+                db.collection("schools").document(self.schoolTextField.text!).updateData([
+                    "members": gotMembers
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                    }
+                }
+            }
+        }
+ */
+        
     }
     
     func errorAlert(_ errorWords: String){
