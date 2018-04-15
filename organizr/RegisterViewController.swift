@@ -23,6 +23,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpPressed(_ sender: Any) {
         
         attemptCreateUser()
+        
+        nameTextField.text! = ""
+        emailTextField.text! = ""
+        schoolTextField.text! = ""
+        passwordTextField.text! = ""
 
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -74,17 +79,37 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-        db.collection("schools").document(schoolTextField.text!).setData([
-            "clubs" : [String](),
-            "members" : [String](),
-            "lastStudent": nameTextField.text!
-        ], options: SetOptions.merge()) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
+        
+        db.collection("schools").document(schoolTextField.text!).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()
+                var gotMembers = dataDescription["members"] as! [String]
+                gotMembers.append(self.nameTextField.text!)
+                
+                db.collection("schools").document(self.schoolTextField.text!).updateData([
+                    "members": gotMembers
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                    }
+                }
             } else {
-                print("Document successfully written!")
+                db.collection("schools").document(self.schoolTextField.text!).setData([
+                    "clubs" : [String](),
+                    "members" : [String](),
+                    "lastStudent": self.nameTextField.text!
+                ], options: SetOptions.merge()) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                    }
+                }
             }
         }
+        
         /*
         db.collection("schools").document(schoolTextField.text!).getDocument { (document, error) in
             if let document = document, document.exists {
