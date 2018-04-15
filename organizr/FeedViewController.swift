@@ -17,7 +17,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     var i = 0
     
     @IBOutlet weak var tableView: UITableView!
-    var groups: [String] = []
+    var groups = [[String: Any]]()
     
     @IBAction func signOutDidPress(_ sender: Any) {
         
@@ -49,7 +49,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("2333")
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell6")! as UITableViewCell
-        cell.textLabel?.text = self.groups[indexPath.row]
+        cell.textLabel?.text = self.groups[indexPath.row]["name"] as! String
         
         return cell
     }
@@ -76,7 +76,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                 let userClubs = dataDescription["groups"] as! [String]
                 print("userclubs", userClubs)
                 
-                var allPostNames = [String]()
+                var allPostNames = [[String: Any]]()
                 
                 for club in userClubs {
                     db.collection("groups").document(club).collection("posts").getDocuments() { (querySnapshot, err) in
@@ -85,7 +85,7 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
                         } else {
                             for document in querySnapshot!.documents {
                                 let postData = document.data()
-                                allPostNames.append(postData["name"] as! String)
+                                allPostNames.append(postData)
                                 self.groups = allPostNames
                                 self.tableView.reloadData()
                                 refreshControl.endRefreshing()
@@ -102,13 +102,17 @@ class FeedViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         //refreshControl.endRefreshing()
     }
     
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("testestst")
+
         
-        if let destination = segue.destination as? CreatePostView{
-            print("howdy")
-            destination.selectedGroup = self.selectedGroup
-            print("testestste")
+
+        let navVC = segue.destination as? UINavigationController
+        
+        if let groupfeed = navVC?.viewControllers.first as? PostViewController{
+            
+            groupfeed.selectedPost = groups[(tableView.indexPathForSelectedRow?.row)!]["timestamp"] as! String
+            groupfeed.selectedGroup = self.selectedGroup
         }
     }
     
