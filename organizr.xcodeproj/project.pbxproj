@@ -11,6 +11,7 @@
 		4643008220826154005BCE85 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4643008120826154005BCE85 /* FeedViewController.swift */; };
 		46430084208265B6005BCE85 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46430083208265B6005BCE85 /* RegisterViewController.swift */; };
 		468DE6F42082904100D54ED1 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DE6F32082904100D54ED1 /* CreateGroupView.swift */; };
+		468DE7012083035800D54ED1 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468DE7002083035800D54ED1 /* CreatePostView.swift */; };
 		46F5383220824F490011A566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5383120824F490011A566 /* AppDelegate.swift */; };
 		46F5383420824F490011A566 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5383320824F490011A566 /* LoginViewController.swift */; };
 		46F5383720824F490011A566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F5383520824F490011A566 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		4643008120826154005BCE85 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		46430083208265B6005BCE85 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		468DE6F32082904100D54ED1 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
+		468DE7002083035800D54ED1 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
 		46F5382E20824F490011A566 /* organizr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = organizr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F5383120824F490011A566 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46F5383320824F490011A566 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				46F5383120824F490011A566 /* AppDelegate.swift */,
 				46F5383520824F490011A566 /* Main.storyboard */,
+				468DE7002083035800D54ED1 /* CreatePostView.swift */,
 				468DE6F32082904100D54ED1 /* CreateGroupView.swift */,
 				468DE6FF2082DF4200D54ED1 /* Authentication */,
 				46F5383820824F490011A566 /* Assets.xcassets */,
@@ -300,6 +303,7 @@
 				E8F07F0A208275B80000456C /* GroupsViewController.swift in Sources */,
 				E8C0085A2082F9DF008CBE5A /* GroupFeedViewController.swift in Sources */,
 				E8F07F0C208275D20000456C /* SettingsViewController.swift in Sources */,
+				468DE7012083035800D54ED1 /* CreatePostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
